@@ -1,0 +1,149 @@
+% Package for converting a more or less confortable way of inserting
+% special characters used in the latin transliteration of tamazight
+% dialects.
+% tbd, 2015-11-27.
+
+\RequirePackage{xstring}
+%\RequirePackage{fclfont}
+%\RequirePackage{ircamtifinagh}
+\RequirePackage{tifinagh}
+
+\newcommand{\gh}{\char"0263}
+\newcommand{\GH}{\raisebox{0.2em}{\char"0263}}
+\newcommand{\ea}{\char"025B}
+
+\newcommand{\w}[1]{#1\textsuperscript{w}}
+
+\newcommand{\toltmz}[1]{%
+	\noexpandarg%  This was the option working
+    % \expandarg%
+%	\StrSubstitute{#1}{gh}{\m{g}}[\x]%
+	\StrSubstitute{#1}{gh}{\gh{}}[\x]%
+%	\expandafter\StrSubstitute\expandafter{\x}{e'}{\m{e}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{e'}{\ea}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{d'}{\d{d}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{h'}{\d{h}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{j'}{\d{j}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{r'}{\d{r}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{s'}{\d{s}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{t'}{\d{t}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{z'}{\d{z}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{k'}{\w{k}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{kw}{\w{k}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{g'}{\w{g}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{gw}{\w{g}}[\x]%
+%	\expandafter\StrSubstitute\expandafter{\x}{gh'}{\w{\m{g}}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{gh'}{\w{\gh}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{gw}{\w{g}}[\x]%
+%    \expandafter\StrSubstitute\expandafter{\x}{ghw}{\w{\m{g}}}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{ghw}{\w{\gh}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{x'}{\w{x}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{xw}{\w{x}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{q'}{\w{q}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{qw}{\w{q}}[\x]%
+%	\expandafter\StrSubstitute\expandafter{\x}{GH}{\m{G}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{GH}{\GH{}}[\x]%
+%	\expandafter\StrSubstitute\expandafter{\x}{E'}{\m{E}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{E'}{\ea}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{D'}{\d{D}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{H'}{\d{H}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{J'}{\d{J}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{R'}{\d{R}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{S'}{\d{S}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{T'}{\d{T}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{Z'}{\d{Z}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{K'}{\w{K}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{KW}{\w{K}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{G'}{\w{G}}[\x]%
+%	\expandafter\StrSubstitute\expandafter{\x}{GH'}{\w{\m{G}}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{GH'}{\w{\GH}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{GW}{\w{G}}[\x]%
+%    \expandafter\StrSubstitute\expandafter{\x}{GHW}{\w{\m{G}}}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{GHW}{\w{\GH}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{X'}{\w{X}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{XW}{\w{X}}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{Q'}{\w{Q}}[\x]%
+	\x%
+}
+
+%\StrSubstitute{AB\_CD}{\_}{}[\SUBtemp]\MakeLowercase{\SUBtemp}
+
+\newcommand{\texttif}[1]{%
+  \noexpandarg%
+  % \fullexpandarg%
+%  \StrSubstitute{#1}{gh}{\yagh}[\x]%
+  \expandafter\StrSubstitute\expandafter{#1}{v}{\yagh}[\x]%
+%  \expandafter\StrSubstitute\expandafter{\x}{v}{\yagh}[\x]%
+%	\expandafter\StrSubstitute\expandafter{\x}{j'}{j}[\x]%
+%	\expandafter\StrSubstitute\expandafter{\x}{r'}{R}[\x]%
+%	\expandafter\StrSubstitute\expandafter{\x}{s'}{S}[\x]%
+%	\expandafter\StrSubstitute\expandafter{\x}{t'}{T}[\x]%
+%	\expandafter\StrSubstitute\expandafter{\x}{z'}{Z}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{W}{\ylab}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{a}{\ya}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{b}{\yab}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{c}{\yash}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{d}{\yad}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{D}{\yadd}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{e}{\yey}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{o}{\yaa}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{f}{\yaf}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{g}{\yag}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{h}{\yah}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{H}{\yahh}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{i}{\yi}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{j}{\yazh}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{k}{\yak}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{l}{\yal}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{m}{\yam}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{n}{\yan}[\x]%
+  % 'o' was used for arabic 'ea'
+  \expandafter\StrSubstitute\expandafter{\x}{q}{\yaq}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{r}{\yar}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{R}{\yarr}[\x]%
+  % 'v' was used for 'gh' (gamma-like in latin writing)
+  \expandafter\StrSubstitute\expandafter{\x}{s}{\yas}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{S}{\yass}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{t}{\yat}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{T}{\yatt}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{u}{\yu}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{w}{\yaw}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{x}{\yakh}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{y}{\yay}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{z}{\yaz}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{Z}{\yazz}[\x]%
+  \x%
+}
+
+\newcommand{\tottmz}[1]{%
+  \noexpandarg%
+  \lowercase{\StrSubstitute{#1}}{gh}{v}[\x]%
+% \expandafter\StrSubstitute\expandafter{\x}{gh}{v}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{ch}{c}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{e'}{o}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{d'}{D}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{h'}{H}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{j'}{j}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{r'}{R}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{s'}{S}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{t'}{T}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{z'}{Z}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{k'}{kW}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{kw}{kW}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{g'}{gW}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{gw}{gW}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{gh'}{vW}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{ghw}{vW}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{x'}{xW}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{xw}{xW}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{q'}{qW}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{qw}{qW}[\x]%
+  %\x%
+  \texttif{\x}%
+}
+
+%%\newcommand{\tottmz}[1]{%
+%%	\tottmztmp{{\lowercase{#1}}}
+%%}
+
+\endinput
