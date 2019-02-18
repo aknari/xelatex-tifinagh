@@ -18,9 +18,12 @@
 	\noexpandarg%  This was the option working
     % \expandarg%
 %	\StrSubstitute{#1}{gh}{\m{g}}[\x]%
-	\StrSubstitute{#1}{gh}{\gh{}}[\x]%
+%	\StrSubstitute{#1}{gh}{\gh{}}[\x]%
+	\StrSubstitute{#1}{e'}{\ea{}}[\x]%
 %	\expandafter\StrSubstitute\expandafter{\x}{e'}{\m{e}}[\x]%
-	\expandafter\StrSubstitute\expandafter{\x}{e'}{\ea}[\x]%
+	\expandafter\StrSubstitute\expandafter{\x}{gh'}{\w{\gh}}[\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{ghw}{\w{\gh}}[\x]%
+  	\expandafter\StrSubstitute\expandafter{\x}{gh}{\gh{}}[\x]%
 	\expandafter\StrSubstitute\expandafter{\x}{d'}{\d{d}}[\x]%
 	\expandafter\StrSubstitute\expandafter{\x}{h'}{\d{h}}[\x]%
 	\expandafter\StrSubstitute\expandafter{\x}{j'}{\d{j}}[\x]%
@@ -33,15 +36,15 @@
 	\expandafter\StrSubstitute\expandafter{\x}{g'}{\w{g}}[\x]%
 	\expandafter\StrSubstitute\expandafter{\x}{gw}{\w{g}}[\x]%
 %	\expandafter\StrSubstitute\expandafter{\x}{gh'}{\w{\m{g}}}[\x]%
-	\expandafter\StrSubstitute\expandafter{\x}{gh'}{\w{\gh}}[\x]%
-	\expandafter\StrSubstitute\expandafter{\x}{gw}{\w{g}}[\x]%
-%    \expandafter\StrSubstitute\expandafter{\x}{ghw}{\w{\m{g}}}[\x]%
-  \expandafter\StrSubstitute\expandafter{\x}{ghw}{\w{\gh}}[\x]%
-	\expandafter\StrSubstitute\expandafter{\x}{x'}{\w{x}}[\x]%
+%   \expandafter\StrSubstitute\expandafter{\x}{gw}{\w{g}}[\x]%
+%   \expandafter\StrSubstitute\expandafter{\x}{ghw}{\w{\m{g}}}[\x]%
+  	\expandafter\StrSubstitute\expandafter{\x}{x'}{\w{x}}[\x]%
 	\expandafter\StrSubstitute\expandafter{\x}{xw}{\w{x}}[\x]%
 	\expandafter\StrSubstitute\expandafter{\x}{q'}{\w{q}}[\x]%
 	\expandafter\StrSubstitute\expandafter{\x}{qw}{\w{q}}[\x]%
 %	\expandafter\StrSubstitute\expandafter{\x}{GH}{\m{G}}[\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{GHW}{\w{\GH}}[\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{GH'}{\w{\GH}}[\x]%
 	\expandafter\StrSubstitute\expandafter{\x}{GH}{\GH{}}[\x]%
 %	\expandafter\StrSubstitute\expandafter{\x}{E'}{\m{E}}[\x]%
 	\expandafter\StrSubstitute\expandafter{\x}{E'}{\ea}[\x]%
@@ -54,12 +57,10 @@
 	\expandafter\StrSubstitute\expandafter{\x}{Z'}{\d{Z}}[\x]%
 	\expandafter\StrSubstitute\expandafter{\x}{K'}{\w{K}}[\x]%
 	\expandafter\StrSubstitute\expandafter{\x}{KW}{\w{K}}[\x]%
-	\expandafter\StrSubstitute\expandafter{\x}{G'}{\w{G}}[\x]%
+   	\expandafter\StrSubstitute\expandafter{\x}{G'}{\w{G}}[\x]%
 %	\expandafter\StrSubstitute\expandafter{\x}{GH'}{\w{\m{G}}}[\x]%
-	\expandafter\StrSubstitute\expandafter{\x}{GH'}{\w{\GH}}[\x]%
 	\expandafter\StrSubstitute\expandafter{\x}{GW}{\w{G}}[\x]%
 %    \expandafter\StrSubstitute\expandafter{\x}{GHW}{\w{\m{G}}}[\x]%
-  \expandafter\StrSubstitute\expandafter{\x}{GHW}{\w{\GH}}[\x]%
 	\expandafter\StrSubstitute\expandafter{\x}{X'}{\w{X}}[\x]%
 	\expandafter\StrSubstitute\expandafter{\x}{XW}{\w{X}}[\x]%
 	\expandafter\StrSubstitute\expandafter{\x}{Q'}{\w{Q}}[\x]%
